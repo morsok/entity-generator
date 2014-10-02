@@ -1,0 +1,15 @@
+name = %NAME%
+description = %DESC%
+core = 7.x
+
+dependencies[] = entity
+dependencies[] = views
+
+files[] = %MD_NAME%_%ENTITY_NAME%.admin.inc
+files[] = %MD_NAME%_%ENTITY_NAME%_type.admin.inc
+files[] = views/%MD_NAME%.views.inc
+files[] = views/%ENTITY_NAME%_handler_link_field.inc
+files[] = views/%ENTITY_NAME%_handler_delete_link_field.inc
+files[] = views/%ENTITY_NAME%_handler_edit_link_field.inc
+files[] = views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.inc
+

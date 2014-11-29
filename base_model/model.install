@@ -6,7 +6,6 @@
  * the entity types.
  */
 
-
 /**
  * Implements hook_schema().
  */
@@ -15,81 +14,81 @@ function model_schema() {
 
   $schema['modelentity'] = array(
     'description' => 'The base table for modelentity entities.',
-    'fields' => array(
+    'fields'      => array(
       'modelentity_id' => array(
         'description' => 'Primary Key: Identifier for a modelentity.',
-        'type' => 'serial',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
+        'type'        => 'serial',
+        'unsigned'    => TRUE,
+        'not null'    => TRUE,
       ),
-      'type' => array(
+      'type'           => array(
         'description' => 'The {modelentity_type}.type of this modelentity.',
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
-        'default' => '',
+        'type'        => 'varchar',
+        'length'      => 255,
+        'not null'    => TRUE,
+        'default'     => '',
       ),
-      'name' => array(
+      'name'           => array(
         'description' => 'The name of the modelentity - a human-readable identifier.',
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
-        'default' => '',
+        'type'        => 'varchar',
+        'length'      => 255,
+        'not null'    => TRUE,
+        'default'     => '',
       ),
-      'created' => array(
+      'created'        => array(
         'description' => 'The Unix timestamp when the modelentity was created.',
-        'type' => 'int',
-        'not null' => TRUE,
-        'default' => 0,
+        'type'        => 'int',
+        'not null'    => TRUE,
+        'default'     => 0,
       ),
-      'changed' => array(
+      'changed'        => array(
         'description' => 'The Unix timestamp when the modelentity was most recently saved.',
-        'type' => 'int',
-        'not null' => TRUE,
-        'default' => 0,
+        'type'        => 'int',
+        'not null'    => TRUE,
+        'default'     => 0,
       ),
-      'uid' => array(
-        'type' => 'int',
+      'uid'            => array(
+        'type'         => 'int',
         'foreign keys' => array(
           'users' => array(
-            'table' => 'users',
-            'columns' => array('uid' => 'uid')
-            ),
+            'table'   => 'users',
+            'columns' => array('uid' => 'uid'),
           ),
         ),
+      ),
     ),
     'primary key' => array('modelentity_id'),
-    'indexes' => array(
+    'indexes'     => array(
       'type' => array('type'),
     ),
   );
 
   $schema['modelentity_type'] = array(
     'description' => 'Stores information about defined modelentity types.',
-    'fields' => array(
-      'id' => array(
-        'type' => 'serial',
-        'not null' => TRUE,
+    'fields'      => array(
+      'id'     => array(
+        'type'        => 'serial',
+        'not null'    => TRUE,
         'description' => 'Primary Key: Unique modelentity type identifier.',
       ),
-      'type' => array(
+      'type'   => array(
         'description' => 'The machine-readable name of this modelentity type.',
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
+        'type'        => 'varchar',
+        'length'      => 255,
+        'not null'    => TRUE,
       ),
-      'label' => array(
+      'label'  => array(
         'description' => 'The human-readable name of this modelentity type.',
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
-        'default' => '',
+        'type'        => 'varchar',
+        'length'      => 255,
+        'not null'    => TRUE,
+        'default'     => '',
       ),
       'weight' => array(
-        'type' => 'int',
-        'not null' => TRUE,
-        'default' => 0,
-        'size' => 'tiny',
+        'type'        => 'int',
+        'not null'    => TRUE,
+        'default'     => 0,
+        'size'        => 'tiny',
         'description' => 'The weight of this modelentity type in relation to others.',
       ),
     ) + entity_exportable_schema_fields(),

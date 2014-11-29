@@ -15,8 +15,9 @@ class ModelentityTypeUIController extends EntityDefaultUIController {
    */
   public function hook_menu() {
     $items = parent::hook_menu();
-		$items[$this->path]['description'] = 'Manage Elabel entity types, including adding
+    $items[$this->path]['description'] = 'Manage Elabel entity types, including adding
 		and removing fields and the display of fields.';
+
     return $items;
   }
 }
@@ -32,29 +33,31 @@ function modelentity_type_form($form, &$form_state, $modelentity_type, $op = 'ed
   }
 
   $form['label'] = array(
-    '#title' => t('Label'),
-    '#type' => 'textfield',
+    '#title'         => t('Label'),
+    '#type'          => 'textfield',
     '#default_value' => $modelentity_type->label,
-    '#description' => t('The human-readable name of this ELabel type.'),
-    '#required' => TRUE,
-    '#size' => 30,
+    '#description'   => t('The human-readable name of this ELabel type.'),
+    '#required'      => TRUE,
+    '#size'          => 30,
   );
   // Machine-readable type name.
   $form['type'] = array(
-    '#type' => 'machine_name',
+    '#type'          => 'machine_name',
     '#default_value' => isset($modelentity_type->type) ? $modelentity_type->type : '',
-    '#maxlength' => 32,
-    '#machine_name' => array(
+    '#maxlength'     => 32,
+    '#machine_name'  => array(
       'exists' => 'modelentity_get_types',
       'source' => array('label'),
     ),
-    '#description' => t('A unique machine-readable name for this ELabel type. It must only contain lowercase letters, numbers, and underscores.'),
+    '#description'   => t(
+      'A unique machine-readable name for this ELabel type. It must only contain lowercase letters, numbers, and underscores.'
+    ),
   );
 
   $form['actions'] = array('#type' => 'actions');
   $form['actions']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Save ELabel type'),
+    '#type'   => 'submit',
+    '#value'  => t('Save ELabel type'),
     '#weight' => 40,
   );
 

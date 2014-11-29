@@ -128,4 +128,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $language = detectLanguage(array('en', 'fr'), 'en');
 
 // Display form generator.
-include 'generator/form_' . $language . '.html';
+include 'generator/index.html';

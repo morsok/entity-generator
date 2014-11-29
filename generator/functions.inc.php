@@ -116,5 +116,5 @@ function parseTemplate($source, $dir, $replace_tokens)
 
     file_put_contents($dir . '/' . $destination, $data);
 
-    return $destination;
+    return $dir . '/' . $destination;
 }

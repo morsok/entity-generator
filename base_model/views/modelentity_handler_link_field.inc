@@ -63,7 +63,7 @@ class modelentity_handler_link_field extends views_handler_field {
   /**
    * Render link.
    *
-   * @param $values
+   * @param array $values
    *   Values.
    *
    * @return string

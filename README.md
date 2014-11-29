@@ -3,7 +3,7 @@ Entity Generator for [Drupal 7](http://www.drupal.org)
 
 Drupal 7 Entity Generator (based on [Model Entities](https://drupal.org/project/model)).
 
-This tool is easily creates custom entities matching best practices.
+This tool easily creates custom entities using best practices.
 Once generated, the module only requires CTools, Views and Entity API.
 From there, you can enhance it, implement your own business logic and so more ...
 

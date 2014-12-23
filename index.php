@@ -98,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $files = array(
       'model.install',
+      'model.features.inc',
       'model_modelentity.admin.inc',
       'model_modelentity_type.admin.inc',
       'model.tpl.php',

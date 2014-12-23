@@ -10,6 +10,13 @@ From there, you can enhance it, implement your own business logic and so more ..
 So enjoy !
 
 Supported by [Accommodata](http://www.accommodata.fr)
+Improved by [Actualys](http://www.actualys.com)
+
+Features
+--------
+
+ * Admin UI
+ * Feature export for entity types
 
 Demo
 ----

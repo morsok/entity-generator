@@ -1,10 +1,13 @@
 name = %NAME%
 description = %DESC%
 core = 7.x
+version = 7.x-1.0-beta1
 
 dependencies[] = entity
 dependencies[] = views
+;dependencies[] = features
 
+;files[] = %MD_NAME%.features.inc
 ;files[] = %MD_NAME%_%ENTITY_NAME%.admin.inc
 ;files[] = %MD_NAME%_%ENTITY_NAME%_type.admin.inc
 ;files[] = views/%MD_NAME%.views.inc
@@ -12,4 +15,6 @@ dependencies[] = views
 ;files[] = views/%ENTITY_NAME%_handler_delete_link_field.inc
 ;files[] = views/%ENTITY_NAME%_handler_edit_link_field.inc
 ;files[] = views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.inc
+
+features[features_api][] = api:2
 

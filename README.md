@@ -5,13 +5,13 @@ Drupal 7 Entity Generator (based on [Model Entities](https://drupal.org/project/
 
 This tool easily creates custom entities using best practices.
 Once generated, the module only requires CTools, Views and Entity API.
-From there, you can enhance it, implement your own business logic and so more ...
+From there, you can enhance it, implement your own business logic and more ...
 
-So enjoy !
+Enjoy !
 
 Supported by [Accommodata](http://www.accommodata.fr)
 
-Improved by [Actualys](http://www.actualys.com)
+Improved by [Actualys](http://www.actualys.com) thanks to [@smalot](https://github.com/smalot) ([@sebastienmalot](https://twitter.com/sebastienmalot))
 
 Features
 --------
@@ -27,7 +27,7 @@ Demo
 Installation
 ------------
 
-Just deploy this tool under Apache (or any other webserver) and enjoy !
+Just deploy this tool under Apache (or any other webserver) and it's ready for use !
 
 Requirements
 ------------

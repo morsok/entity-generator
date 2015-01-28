@@ -1,8 +1,15 @@
 <?php
 
-function model_menu()
-{
-	$items = array();
+/**
+ * @file
+ * Module for the Model Entity.
+ */
 
-	return $items;
+/**
+ * Implements hook_menu().
+ */
+function model_menu() {
+  $items = array();
+
+  return $items;
 }

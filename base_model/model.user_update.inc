@@ -1,6 +1,13 @@
 <?php
 
-function model_user_update(&$edit, $account, $category)
-{
-	
+/**
+ * @file
+ * Module for the Model Entity.
+ */
+
+/**
+ * Implements hook_user_update().
+ */
+function model_user_update(&$edit, $account, $category) {
+
 }

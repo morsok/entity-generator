@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-sm-6">
+        <p>Patch note 24/12/2014:</p>
+        <ul>
+            <li>Ajout du support de Features pour l'export des types</li>
+        </ul>
+
+        <p>Patch note 29/11/2014:</p>
+        <ul>
+            <li>Réécriture du générateur</li>
+            <li>Support de l'anglais pour le générateur</li>
+        </ul>
+
+        <p>Patch note 16/06/2014:</p>
+        <ul>
+            <li>Suppression du hook_hook_info remplacé par des appels à module_load_include</li>
+        </ul>
+
+        <p>Patch note 13/06/2014:</p>
+        <ul>
+            <li>Fix: REQUEST_TIME ajouté sur le champ created du controller à la création de l'entity</li>
+            <li>Ajout du hook_action_info</li>
+        </ul>
+
+        <p>Patch note 11/06/2014:</p>
+        <ul>
+            <li>Ajout d'une relationship views pour le champ uid de l'entité</li>
+            <li>Ajout du hook_menu dans la liste des hooks disponibles</li>
+        </ul>
+
+        <p>Patch note 02/06/2014:</p>
+        <ul>
+            <li>Ajout de permissions (view/edit/delete own entity type)</li>
+            <li>Ajout de l'uid de l'auteur dans le schéma (hook_install) et remplissage dans le create du controller avec le global $user</li>
+            <li>Ajout de la possibilité de déclarer des hooks dans des fichiers séparés</li>
+        </ul>
+
+        <p>Patch note 22/05/2014:</p>
+        <ul>
+            <li>Correction du nommage du fichier .tpl.php</li>
+            <li>Ajout du label singulier et pluriel de l'entité traduisible ensuite dans Drupal {possiblement quelques oublis}</li>
+            <li>Séparation de la view d'admin de l'entité dans un fichier distinct .view afin de simplifier les imports/exports en code</li>
+            <li>Ajout d'un handler views pour les dates pour les champs created et changed</li>
+        </ul>
+    </div>
+
+    <div class="col-sm-6">
+        <p>TODO</p>
+        <ul>
+            <li>Retravailler la vue dans l'admin pour une meilleur usabilité (VBO etc...)</li>
+            <li><p class="text-muted">Des questions/Suggestions ? <a href="mailto:alexandre@accommodata.fr">Contactez-nous</a></p></li>
+        </ul>
+    </div>
+</div>

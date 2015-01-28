@@ -1,0 +1,63 @@
+<form method="post" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="module_name" class="col-sm-2 control-label">Nom du module</label>
+        <div class="col-sm-10">
+            <input class="form-control" required type="text" name="module_name" id="module_name" placeholder="Mon module"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="machine_name" class="col-sm-2 control-label">Nom machine du module</label>
+        <div class="col-sm-10">
+            <input class="form-control" required type="text" name="machine_name" id="machine_name" placeholder="views / module_filter / my_module"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="module_desc" class="col-sm-2 control-label">Description du module</label>
+        <div class="col-sm-10">
+            <input class="form-control" required type="text" size="60" name="module_desc" id="module_desc" placeholder="La description de mon module"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="entity_label" class="col-sm-2 control-label">Label de l'entité</label>
+        <div class="col-sm-10">
+            <input class="form-control" required type="text" name="entity_label" id="entity_label" placeholder="Entité Custom"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="entity_label_plural" class="col-sm-2 control-label">Label de l'entité au pluriel</label>
+        <div class="col-sm-10">
+            <input class="form-control" required type="text" name="entity_label_plural" id="entity_label_plural" placeholder="Entités Custom"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="entity_name" class="col-sm-2 control-label">Nom machine de l'entité</label>
+        <div class="col-sm-10">
+            <input class="form-control" required type="text" name="entity_name" id="entity_name" placeholder="node / users / custom_entity"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="hooks" class="col-sm-2 control-label">Selectionner les hooks à ajouter (optionnel)</label>
+        <div class="col-sm-10">
+            <select data-placeholder="Choisissez un hook" class="form-control chosen-select" id="hooks" name="hooks[]" multiple tabindex="4">
+                <option value="hook_entity_presave">hook_entity_presave</option>
+                <option value="hook_entity_update">hook_entity_update</option>
+                <option value="hook_entity_view">hook_entity_view</option>
+                <option value="hook_node_load">hook_node_load</option>
+                <option value="hook_node_presave">hook_node_presave</option>
+                <option value="hook_node_update">hook_node_update</option>
+                <option value="hook_node_insert">hook_node_insert</option>
+                <option value="hook_node_view">hook_node_view</option>
+                <option value="hook_user_insert">hook_user_insert</option>
+                <option value="hook_user_presave">hook_user_presave</option>
+                <option value="hook_user_update">hook_user_update</option>
+                <option value="hook_menu">hook_menu</option>
+                <option value="hook_action_info">hook_action_info</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Télécharger le module zippé</button>
+        </div>
+    </div>
+</form>

@@ -1,4 +1,35 @@
-entity-generator
-================
+Entity Generator for [Drupal 7](http://www.drupal.org)
+=============================
 
-Drupal 7 entity generator (à la ECK based on Model)
+Drupal 7 Entity Generator (based on [Model Entities](https://drupal.org/project/model)).
+
+This tool easily creates custom entities using best practices.
+Once generated, the module only requires CTools, Views and Entity API.
+From there, you can enhance it, implement your own business logic and so more ...
+
+So enjoy !
+
+Supported by [Accommodata](http://www.accommodata.fr)
+
+Improved by [Actualys](http://www.actualys.com)
+
+Features
+--------
+
+ * Admin UI
+ * Feature export for entity types
+
+Demo
+----
+
+[www.entity-generator.accommodata.fr](http://www.entity-generator.accommodata.fr)
+
+Installation
+------------
+
+Just deploy this tool under Apache (or any other webserver) and enjoy !
+
+Requirements
+------------
+
+Needs Zip PHP module.

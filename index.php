@@ -47,14 +47,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = str_replace('%ENTITY_NAME%', $_POST['entity_name'], $data);
     file_put_contents($dir . '/' . $_POST['machine_name'] . '.info', $data);
 
+    // Create smart class names.
+    $classname_entity = str_replace(' ', '', ucwords(str_replace('_', ' ', $_POST['entity_name'])));
+    $classname_model = str_replace(' ', '', ucwords(str_replace('_', ' ', $_POST['machine_name'])));
+
     // Create replace mapping.
     $replace_tokens = array(
       'modelentity'   => $_POST['entity_name'],
       'modelentities' => $_POST['entity_name'] . 's',
       'model'         => $_POST['machine_name'],
-      'Modelentity'   => ucfirst($_POST['entity_name']),
-      'Modelentities' => ucfirst($_POST['entity_name'] . 's'),
-      'Model'         => ucfirst($_POST['machine_name']),
+      'Modelentity'   => $classname_entity,
+      'Modelentities' => $classname_entity . 's',
+      'Model'         => $classname_model,
       'ELabels'       => ucfirst($_POST['entity_label_plural']),
       'ELabel'        => ucfirst($_POST['entity_label']),
     );

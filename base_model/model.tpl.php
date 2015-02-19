@@ -29,7 +29,7 @@
  */
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php if (!$page): ?>
+  <?php if (!$page && !empty($title)): ?>
     <h2<?php print $title_attributes; ?>>
       <a href="<?php print $url; ?>"><?php print $title; ?></a>
     </h2>

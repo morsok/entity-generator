@@ -44,6 +44,9 @@ function model_entity_info() {
       'controller class' => 'ModelentityUIController',
       'menu wildcard'    => '%modelentity',
     ),
+    'inline entity form' => array(
+      'controller' => 'ModelentityInlineEntityFormController'
+    ),
   );
 
   // The entity that holds information about the entity types.
@@ -570,3 +573,16 @@ class ModelentityTypeController extends EntityAPIControllerExportable {
     return $modelentity_type;
   }
 }
+
+if (class_exists('EntityInlineEntityFormController')) {
+  /**
+   * The Controller for Modelentity entities for Inline Entity Form.
+   *
+   * Class ModelentityInlineEntityFormController
+   */
+  class ModelentityInlineEntityFormController extends EntityInlineEntityFormController {
+
+  }
+}
+
+

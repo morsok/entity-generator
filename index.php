@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     mkdir($dir);
     mkdir($dir . '/views');
+    mkdir($dir . '/classes');
 
     // model.info
     $data = file_get_contents(BASE_SRC . '/model.info');
@@ -112,6 +113,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       'views/modelentity_handler_edit_link_field.inc',
       'views/modelentity_handler_delete_link_field.inc',
       'views/modelentity.admin.view',
+      'classes/Modelentity.inc',
+      'classes/ModelentityController.inc',
+      'classes/ModelentityType.inc',
+      'classes/ModelentityTypeController.inc',
     );
 
     foreach ($files as $file) {

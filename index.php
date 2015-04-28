@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       'model.features.inc',
       'model_modelentity.admin.inc',
       'model_modelentity_type.admin.inc',
-      'model.tpl.php',
+      'modelentity.tpl.php',
       'views/model.views.inc',
       'views/modelentity_handler_link_field.inc',
       'views/modelentity_handler_modelentity_operations_field.inc',

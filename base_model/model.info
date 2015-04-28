@@ -15,6 +15,10 @@ files[] = views/%ENTITY_NAME%_handler_link_field.inc
 files[] = views/%ENTITY_NAME%_handler_delete_link_field.inc
 files[] = views/%ENTITY_NAME%_handler_edit_link_field.inc
 files[] = views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.inc
+files[] = classes/%ENTITY_NAME%.inc
+files[] = classes/%ENTITY_NAME%Controller.inc
+files[] = classes/%ENTITY_NAME%Type.inc
+files[] = classes/%ENTITY_NAME%TypeController.inc
 
 features[features_api][] = api:2
 

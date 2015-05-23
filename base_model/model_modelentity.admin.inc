@@ -361,7 +361,7 @@ function modelentity_set_breadcrumb() {
     l(t('Home'), '<front>'),
     l(t('Administration'), 'admin'),
     l(t('Content'), 'admin/content'),
-    l(t('Modelentities'), 'admin/content/modelentities'),
+    l(t('ELabel'), 'admin/content/modelentities'),
   );
 
   drupal_set_breadcrumb($breadcrumb);

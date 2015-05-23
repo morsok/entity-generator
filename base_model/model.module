@@ -5,6 +5,9 @@
  * Module for the Model Entity.
  */
 
+include_once 'model.features.inc';
+include_once 'views/model.views.inc';
+
 %HOOKS%
 
 /**
@@ -172,16 +175,6 @@ function model_theme() {
       'render element' => 'elements',
       'template'       => 'templates/modelentity',
     ),
-  );
-}
-
-/**
- * Implements hook_views_api().
- */
-function model_views_api() {
-  return array(
-    'api'  => 3,
-    'path' => drupal_get_path('module', 'model') . '/views',
   );
 }
 

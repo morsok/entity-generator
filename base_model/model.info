@@ -8,6 +8,7 @@ dependencies[] = views
 ;dependencies[] = features
 
 files[] = %MD_NAME%.features.inc
+files[] = %MD_NAME%.views_default.inc
 files[] = %MD_NAME%_%ENTITY_NAME%.admin.inc
 files[] = %MD_NAME%_%ENTITY_NAME%_type.admin.inc
 files[] = views/%MD_NAME%.views.inc
@@ -16,5 +17,7 @@ files[] = views/%ENTITY_NAME%_handler_delete_link_field.inc
 files[] = views/%ENTITY_NAME%_handler_edit_link_field.inc
 files[] = views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.inc
 
+features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[views_view][] = %MD_NAME%_admin
 

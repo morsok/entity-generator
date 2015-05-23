@@ -99,24 +99,3 @@ function model_views_data_alter(&$data) {
   );
 }
 
-/**
- * Implements hook_views_default_views().
- */
-function model_views_default_views() {
-  static $views;
-
-  if (isset($views)) {
-    return $views;
-  }
-
-  $files = file_scan_directory(drupal_get_path('module', 'model') . '/views', '/\.view$/');
-
-  foreach ($files as $filepath => $file) {
-    include $filepath;
-    if (isset($view)) {
-      $views[$view->name] = $view;
-    }
-  }
-
-  return $views;
-}

@@ -23,5 +23,5 @@ files[] = includes/views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.in
 
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
-features[views_view][] = %MD_NAME%_admin
+features[views_view][] = %ENTITY_NAME%_admin
 

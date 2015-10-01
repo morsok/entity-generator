@@ -26,6 +26,7 @@ function model_entity_info() {
     'entity keys'       => array(
       'id'     => 'modelentity_id',
       'bundle' => 'type',
+      'label'  => 'name',
     ),
     // Bundles are defined by the modelentity types below.
     'bundles'           => array(),

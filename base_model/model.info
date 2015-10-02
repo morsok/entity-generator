@@ -8,17 +8,20 @@ dependencies[] = views
 ;dependencies[] = features
 
 files[] = %MD_NAME%.features.inc
+files[] = %MD_NAME%.views_default.inc
 files[] = %MD_NAME%_%ENTITY_NAME%.admin.inc
 files[] = %MD_NAME%_%ENTITY_NAME%_type.admin.inc
-files[] = views/%MD_NAME%.views.inc
-files[] = views/%ENTITY_NAME%_handler_link_field.inc
-files[] = views/%ENTITY_NAME%_handler_delete_link_field.inc
-files[] = views/%ENTITY_NAME%_handler_edit_link_field.inc
-files[] = views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.inc
-files[] = classes/%ENTITY_NAME%.inc
-files[] = classes/%ENTITY_NAME%Controller.inc
-files[] = classes/%ENTITY_NAME%Type.inc
-files[] = classes/%ENTITY_NAME%TypeController.inc
+files[] = includes/%ENTITY_CLASS%.inc
+files[] = includes/%ENTITY_CLASS%Controller.inc
+files[] = includes/%ENTITY_CLASS%Type.inc
+files[] = includes/%ENTITY_CLASS%TypeController.inc
+files[] = includes/views/%MD_NAME%.views.inc
+files[] = includes/views/%ENTITY_NAME%_handler_link_field.inc
+files[] = includes/views/%ENTITY_NAME%_handler_delete_link_field.inc
+files[] = includes/views/%ENTITY_NAME%_handler_edit_link_field.inc
+files[] = includes/views/%ENTITY_NAME%_handler_%ENTITY_NAME%_operations_field.inc
 
+features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[views_view][] = %ENTITY_NAME%_admin
 

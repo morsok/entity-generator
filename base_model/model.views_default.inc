@@ -1,13 +1,24 @@
 <?php
 
+/**
+ * @file
+ * mdp_block_footer.views_default.inc
+ */
+
+/**
+ * Implements hook_views_default_views().
+ */
+function model_views_default_views() {
+  $export = array();
+
   $view = new view;
-  $view->name = 'ELabels';
+  $view->name = 'modelentity_admin';
   $view->description = 'A list of all ELabels';
   $view->tag = 'ELabels';
   $view->base_table = 'modelentity';
-  $view->human_name = 'ELabels';
+  $view->human_name = 'ELabels Admin';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -129,7 +140,7 @@
   $handler->display->display_options['fields']['operations']['empty_zero'] = 0;
 
   /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'modelentities_admin_page');
+  $handler = $view->new_display('page', 'Page', 'modelentity_admin_page');
   $handler->display->display_options['path'] = 'admin/content/modelentities/list';
   $handler->display->display_options['menu']['type'] = 'default tab';
   $handler->display->display_options['menu']['title'] = 'List';
@@ -139,7 +150,7 @@
   $handler->display->display_options['tab_options']['description'] = 'Manage ELabels';
   $handler->display->display_options['tab_options']['weight'] = '0';
   $handler->display->display_options['tab_options']['name'] = 'management';
-  $translatables['modelentities'] = array(
+  $translatables['modelentity_admin'] = array(
     t('Master'),
     t('ELabels'),
     t('more'),
@@ -161,3 +172,8 @@
     t('Operations links'),
     t('Page'),
   );
+  $export['modelentity_admin'] = $view;
+
+  return $export;
+}
+

@@ -37,8 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     mkdir($dir);
-    mkdir($dir . '/views');
-    mkdir($dir . '/classes');
+    mkdir($dir . '/includes');
+    mkdir($dir . '/includes/views');
+    mkdir($dir . '/templates');
+    mkdir($dir . '/templates/entities');
+
+    // Create smart class names.
+    $classname_entity = str_replace(' ', '', ucwords(str_replace('_', ' ', $_POST['entity_name'])));
+    $classname_model = str_replace(' ', '', ucwords(str_replace('_', ' ', $_POST['machine_name'])));
 
     // model.info
     $data = file_get_contents(BASE_SRC . '/model.info');
@@ -46,11 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = str_replace('%DESC%', $_POST['module_desc'], $data);
     $data = str_replace('%MD_NAME%', $_POST['machine_name'], $data);
     $data = str_replace('%ENTITY_NAME%', $_POST['entity_name'], $data);
+    $data = str_replace('%ENTITY_CLASS%', $classname_entity, $data);
     file_put_contents($dir . '/' . $_POST['machine_name'] . '.info', $data);
-
-    // Create smart class names.
-    $classname_entity = str_replace(' ', '', ucwords(str_replace('_', ' ', $_POST['entity_name'])));
-    $classname_model = str_replace(' ', '', ucwords(str_replace('_', ' ', $_POST['machine_name'])));
 
     // Create replace mapping.
     $replace_tokens = array(
@@ -104,19 +107,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $files = array(
       'model.install',
       'model.features.inc',
+      'model.views_default.inc',
       'model_modelentity.admin.inc',
       'model_modelentity_type.admin.inc',
-      'modelentity.tpl.php',
-      'views/model.views.inc',
-      'views/modelentity_handler_link_field.inc',
-      'views/modelentity_handler_modelentity_operations_field.inc',
-      'views/modelentity_handler_edit_link_field.inc',
-      'views/modelentity_handler_delete_link_field.inc',
-      'views/modelentity.admin.view',
-      'classes/Modelentity.inc',
-      'classes/ModelentityController.inc',
-      'classes/ModelentityType.inc',
-      'classes/ModelentityTypeController.inc',
+      'templates/entities/modelentity.tpl.php',
+      'includes/Modelentity.inc',
+      'includes/ModelentityController.inc',
+      'includes/ModelentityType.inc',
+      'includes/ModelentityTypeController.inc',
+      'includes/views/model.views.inc',
+      'includes/views/modelentity_handler_link_field.inc',
+      'includes/views/modelentity_handler_modelentity_operations_field.inc',
+      'includes/views/modelentity_handler_edit_link_field.inc',
+      'includes/views/modelentity_handler_delete_link_field.inc',
     );
 
     foreach ($files as $file) {

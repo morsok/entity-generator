@@ -5,6 +5,9 @@
  * Module for the Model Entity.
  */
 
+include_once 'model.features.inc';
+include_once 'includes/views/model.views.inc';
+
 %HOOKS%
 
 /**
@@ -23,6 +26,7 @@ function model_entity_info() {
     'entity keys'       => array(
       'id'     => 'modelentity_id',
       'bundle' => 'type',
+      'label'  => 'name',
     ),
     // Bundles are defined by the modelentity types below.
     'bundles'           => array(),
@@ -170,18 +174,8 @@ function model_theme() {
     ),
     'modelentity'          => array(
       'render element' => 'elements',
-      'template'       => 'modelentity',
+      'template'       => 'templates/entities/modelentity',
     ),
-  );
-}
-
-/**
- * Implements hook_views_api().
- */
-function model_views_api() {
-  return array(
-    'api'  => 3,
-    'path' => drupal_get_path('module', 'model') . '/views',
   );
 }
 
@@ -401,11 +395,6 @@ function modelentity_page_view(Modelentity $modelentity, $view_mode = 'full') {
   return $content;
 }
 
-
-
-
-
-
 if (class_exists('EntityInlineEntityFormController')) {
   /**
    * The Controller for Modelentity entities for Inline Entity Form.
@@ -416,5 +405,4 @@ if (class_exists('EntityInlineEntityFormController')) {
 
   }
 }
-
 

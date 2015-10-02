@@ -9,20 +9,17 @@ From there, you can enhance it, implement your own business logic and more ...
 
 Enjoy !
 
-Supported by [Accommodata](http://www.accommodata.fr)
+Initial development supported by [Accommodata](http://www.accommodata.fr)
 
 Improved by [Actualys](http://www.actualys.com) thanks to [@smalot](https://github.com/smalot) ([@sebastienmalot](https://twitter.com/sebastienmalot))
+
+Maintened by [@morsok](https://github.com/morsok) ([also @morsok on Twitter](https://twitter.com/morsok))
 
 Features
 --------
 
  * Admin UI
  * Feature export for entity types
-
-Demo
-----
-
-[www.entity-generator.accommodata.fr](http://www.entity-generator.accommodata.fr)
 
 Installation
 ------------

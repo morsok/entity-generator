@@ -34,7 +34,7 @@ class ModelentityController extends EntityAPIController {
       'modelentity_id' => '',
       'uid'            => $user->uid,
       'is_new'         => TRUE,
-      'title'          => '',
+      'name'          => '',
       'created'        => REQUEST_TIME,
       'changed'        => '',
     );

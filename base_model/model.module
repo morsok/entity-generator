@@ -198,7 +198,7 @@ function modelentity_access($op, $modelentity = NULL, $account = NULL) {
   if (user_access('administer modelentities', $account)) {
     return TRUE;
   }
-  if (isset($modelentity) && $type_name = $modelentity->type) {
+  if (is_object($modelentity) && $type_name = $modelentity->type) {
     $op = ($op == 'view') ? 'view' : 'edit';
     if (user_access("$op any $type_name modelentity", $account)) {
       return TRUE;

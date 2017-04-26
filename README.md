@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 Entity Generator for [Drupal 7](http://www.drupal.org)
 =============================
 
@@ -13,7 +15,7 @@ Initial development supported by [Accommodata](http://www.accommodata.fr)
 
 Improved by [Actualys](http://www.actualys.com) thanks to [@smalot](https://github.com/smalot) ([@sebastienmalot](https://twitter.com/sebastienmalot))
 
-Maintened by [@morsok](https://github.com/morsok) ([also @morsok on Twitter](https://twitter.com/morsok))
+Made by [@morsok](https://github.com/morsok) ([also @morsok on Twitter](https://twitter.com/morsok))
 
 Features
 --------
